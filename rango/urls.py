@@ -20,5 +20,8 @@ from rango import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+
     url(r'^admin/', admin.site.urls),
+    url(r'^category/(?P<category_name_slug>[\w\-]+)/$',
+        views.show_category, name='show_category'),
 ]
